@@ -25,7 +25,20 @@ In today’s fast-paced development environment, integrating security into the D
 
 
 ## Tools Used
-<!-- Tools Used content here -->
+
+# Tools Used in the Project
+
+| Tool       | Logo                                                                                       | Link                                |   | Tool       | Logo                                                                                       | Link                                |   | Tool       | Logo                                                                                       | Link                                |
+|------------|--------------------------------------------------------------------------------------------|-------------------------------------|---|------------|--------------------------------------------------------------------------------------------|-------------------------------------|---|------------|--------------------------------------------------------------------------------------------|-------------------------------------|
+| Azure      | <img src="https://github.com/eyongca/DevSecOps-End-to-End-Pipeline/blob/main/images/azure.svg" width="20" height="20"> | [Azure](https://azure.microsoft.com/) |   | Ansible    | <img src="https://github.com/eyongca/DevSecOps-End-to-End-Pipeline/blob/main/images/ansible.svg" width="20" height="20"> | [Ansible](https://www.ansible.com/)       |   | Jenkins    | <img src="https://github.com/eyongca/DevSecOps-End-to-End-Pipeline/blob/main/images/jenkins.svg" width="20" height="20"> | [Jenkins](https://www.jenkins.io/) |
+| Terraform  | <img src="https://github.com/eyongca/DevSecOps-End-to-End-Pipeline/blob/main/images/terraformio.svg" width="20" height="20"> | [Terraform](https://www.terraform.io/) |   | Docker     | <img src="https://github.com/eyongca/DevSecOps-End-to-End-Pipeline/blob/main/images/docker.svg" width="20" height="20"> | [Docker](https://www.docker.com/)         |   | Vault      | <img src="https://github.com/eyongca/DevSecOps-End-to-End-Pipeline/blob/main/images/vault.svg" width="20" height="20"> | [Vault](https://www.hashicorp.com/products/vault) |
+| Linux      | <img src="https://github.com/eyongca/DevSecOps-End-to-End-Pipeline/blob/main/images/linux-icon.svg" width="20" height="20"> | [Linux](https://www.kernel.org/)     |   | Kubernetes | <img src="https://github.com/eyongca/DevSecOps-End-to-End-Pipeline/blob/main/images/kubernetes.svg" width="20" height="20"> | [Kubernetes](https://kubernetes.io/)      |   | Trivy      | <img src="https://github.com/eyongca/DevSecOps-End-to-End-Pipeline/blob/main/images/trivy.svg" width="20" height="20"> | [Trivy](https://aquasecurity.github.io/trivy/) |
+| Git        | <img src="https://github.com/eyongca/DevSecOps-End-to-End-Pipeline/blob/main/images/git.svg" width="20" height="20"> | [Git](https://git-scm.com/)           |   | SonarQube  | <img src="https://github.com/eyongca/DevSecOps-End-to-End-Pipeline/blob/main/images/sonarqube.svg" width="20" height="20"> | [SonarQube](https://www.sonarqube.org/)   |   | Maven      | <img src="https://github.com/eyongca/DevSecOps-End-to-End-Pipeline/blob/main/images/maven.svg" width="20" height="20"> | [Maven](https://maven.apache.org/)         |
+| GitHub     | <img src="https://github.com/eyongca/DevSecOps-End-to-End-Pipeline/blob/main/images/github.svg" width="20" height="20"> | [GitHub](https://github.com/)       |   | JUnit      | <img src="https://github.com/eyongca/DevSecOps-End-to-End-Pipeline/blob/main/images/junit5.png" width="20" height="20"> | [JUnit](https://junit.org/junit4/)         |   | Selenium   | <img src="https://github.com/eyongca/DevSecOps-End-to-End-Pipeline/blob/main/images/selenium.svg" width="20" height="20"> | [Selenium](https://www.selenium.dev/)     |
+
+
+
+
 
 ## Pipeline
 <!-- Pipeline content here -->
