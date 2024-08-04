@@ -49,10 +49,76 @@ In today’s fast-paced development environment, integrating security into the D
 <!-- Azure Infrastructure content here -->
 
 ## Detailed Workflow
-<!-- Detailed Workflow content here -->
+
+1. **Commit and Push Code**: 
+   - The developer commits and pushes the source code to the GitHub repository.
+
+2. **GitHub to Jenkins**: 
+   - A GitHub webhook triggers Jenkins upon code push.
+
+3. **Vault Integration**: 
+   - Jenkins fetches credentials from Vault using its integration.
+
+4. **Trigger Build**: 
+   - Jenkins initiates the build process.
+
+5. **Checkout Code**: 
+   - Jenkins checks out the source code from the GitHub repository to the specified branch.
+
+6. **Scan Code**: 
+   - The fetched source code is scanned with SonarQube, and the analysis report is sent to the SonarQube server.
+
+7. **Build Application**: 
+   - The source code is built using Maven, producing a JAR file (including a WAR file and Tomcat server).
+
+8. **Test Application**: 
+   - The built application is tested using JUnit test cases, with reports stored via the SureFire plugin.
+
+9. **Push Artifact**: 
+   - The JAR file is pushed to the Ansible server using SCP.
+
+10. **Run Ansible Playbook**: 
+    - The Ansible playbook is executed on the Ansible server.
+
+11. **Clean Workspace**: 
+    - Compiled, built, and packaged components are deleted from the workspace.
+
+12. **Send Status**: 
+    - Build status is sent to GitHub, and both build status and test summary are sent to Slack (notifications are sent on failure at any stage).
+
+13. **Docker Operations**:
+    - **Login**: Login to DockerHub with registry credentials.
+    - **Build Image**: Build the Docker image, incorporating the JAR file from Jenkins.
+    - **Tag & Push Image**: Tag the image with the current Jenkins build number and push it to the registry for update deployments. Re-tag the image as "latest" and push it to DockerHub for initial deployments.
+    - **Logout**: Logout from DockerHub.
+
+14. **Vulnerability Scan**: 
+    - Use Trivy to scan Docker images for vulnerabilities and secrets, and upload reports to blob storage.
+
+15. **Deployment Check**: 
+    - Verify the existence of deployment on the Kubernetes cluster via the master node.
+      - **Create Deployment**: If no deployment exists, create one using the latest image.
+      - **Update Deployment**: If deployment exists, update it with the tagged image.
+
+16. **Notify Deployment Status**: 
+    - Notify Slack of the deployment status (failure at any stage triggers a notification).
+
+17. **Public Access**: 
+    - The deployment can be accessed via a static public IP attached to the Nginx ingress controller. A domain name can be attached to this IP.
+
 
 ## Security Approaches
-<!-- Security Approaches content here -->
+1. **Network Segmentation**: 
+   - Each virtual machine (VM) is in its own subnet, with inter-subnet connections blocked by NSG security rules.
+
+2. **NSG Inbound Rules**: 
+   - Each VM has specific NSG inbound rules allowing only the necessary ports for respective software.
+
+3. **SSH Security**: 
+   - VMs are secured with SSH public key authentication to prevent brute-force attacks. Terraform establishes SSH connections during infrastructure provisioning. Keys can be stored locally for manual VM access.
+
+4. **Credential Management**: 
+   - All tool credentials are securely stored in HashiCorp Vault. Jenkins accesses and distributes these credentials via pipeline interpolation to ensure security. Jenkins is chosen for its secure credential storage among the pipeline tools.
 
 ## Project Demo
 <!-- Project Demo content here -->
