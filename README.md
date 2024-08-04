@@ -41,7 +41,9 @@ In today’s fast-paced development environment, integrating security into the D
 
 
 ## Pipeline
-<!-- Pipeline content here -->
+# DevSecOps-End-to-End-Pipeline diagram
+![Project Image](https://github.com/eyongca/DevSecOps-End-to-End-Pipeline/blob/main/images/project.webp)
+
 
 ## Azure Infrastructure
 <!-- Azure Infrastructure content here -->
