@@ -42,7 +42,7 @@ In today’s fast-paced development environment, integrating security into the D
 
 ## Pipeline
 # DevSecOps-End-to-End-Pipeline diagram
-![Project Image](https://github.com/eyongca/DevSecOps-End-to-End-Pipeline/blob/main/images/project.webp)
+![Project Image](https://github.com/eyongca/DevSecOps-End-to-End-Pipeline/blob/main/images/pipeline.webp)
 
 
 ## AWS Infrastructure
