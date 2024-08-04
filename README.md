@@ -45,7 +45,7 @@ In today’s fast-paced development environment, integrating security into the D
 ![Project Image](https://github.com/eyongca/DevSecOps-End-to-End-Pipeline/blob/main/images/project.webp)
 
 
-## Infrastructure
+## AWS Infrastructure
 <!-- Azure Infrastructure content here -->
 
 ## Detailed Workflow
