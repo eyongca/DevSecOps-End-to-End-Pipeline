@@ -6,7 +6,7 @@
 1. [Introduction](#introduction)
 2. [Tools Used](#tools-used)
 3. [Pipeline](#pipeline)
-4. [Azure Infrastructure](#azure-infrastructure)
+4. [AWS Infrastructure](#azure-infrastructure)
 5. [Detailed Workflow](#detailed-workflow)
 6. [Security Approaches](#security-approaches)
 7. [Project Demo](#project-demo)
