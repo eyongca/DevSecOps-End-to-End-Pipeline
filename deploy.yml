@@ -1,0 +1,16 @@
+- name: Deploy application
+  hosts: all
+  tasks:
+    - name: Install dependencies
+      apt:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - python3-pip
+        - docker.io
+
+    - name: Pull Docker image
+      command: docker pull your-image
+
+    - name: Run Docker container
+      command: docker run -d --name your-container -p 80:80 your-image
